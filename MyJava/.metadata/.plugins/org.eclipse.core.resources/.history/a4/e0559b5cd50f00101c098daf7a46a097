@@ -1,0 +1,31 @@
+package work.com.workshop13.test05;
+
+import java.util.ArrayList;
+
+public class ListTest03 {
+	public static void main(String[] args) {
+		ArrayList<Integer> arr1 = new ArrayList<>();
+		ArrayList<Integer> arr2 = new ArrayList<>();
+
+		for (int i = 0; i < 10; i++) {
+			int a1 = (int)Math.random()*10;
+			int a2 = (int)Math.random()*10;
+			arr1.add(a1);
+			arr2.add(a2);
+		}
+		
+		arr1.stream().forEach(n->System.out.println(n));
+
+		// 순서대로 나눗셈 진행
+		for (int i = 0; i < 10; i++) {
+			int res = 0;
+			try {
+				res = (int)arr1.get(i)/arr2.get(i);
+				System.out.printf("%d/%d\n", arr1.get(i), arr2.get(i));
+			} catch (Exception e) {
+				System.out.printf("%d/%d\n", arr1.get(i), arr2.get(i));
+				System.out.println("분모가 0입니다.");
+			} 
+		}
+	}
+}

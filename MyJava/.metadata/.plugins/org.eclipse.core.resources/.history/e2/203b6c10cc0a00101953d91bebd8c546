@@ -1,0 +1,22 @@
+package work.com.workshop12.string;
+
+import java.util.stream.Collectors;
+
+public class StringTest01 {
+	public static void main(String[] args) {
+		String str = "I am second to none";
+		
+		// 문자열의 각 문자를 공백으로 구분하여 출력
+		String charStr = str.chars()
+							.mapToObj(c -> String.valueOf((char) c))
+							.filter(s -> !s.equals(" "))
+							.collect(Collectors.joining(" "));
+		System.out.println(charStr);
+		
+		long charCnt = str.chars()
+						 .filter(c-> !Character.isWhitespace(c))
+						 .count();
+		System.out.println("문자 개수: "+charCnt);
+		
+	}
+}

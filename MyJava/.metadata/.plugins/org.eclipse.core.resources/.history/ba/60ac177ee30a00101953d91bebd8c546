@@ -1,0 +1,50 @@
+package work.com.workshop12;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Test08 {
+
+	public static void main(String[] args) {
+		List<String> data = List.of("홍길동,5000000", "이순신,6500000", "유관순,4800000", "강감찬,7000000", "신사임당,5500000");
+
+		Map<String, Integer> dataMap = data.stream().map(s -> s.split(","))
+				.filter(arr -> Integer.parseInt(arr[1]) >= 5000000)
+				.collect(Collectors.toMap(arr -> arr[0], arr -> Integer.parseInt(arr[1])));
+
+		// 이름순 정렬
+		dataMap.entrySet().stream().sorted(Map.Entry.comparingByKey())
+				.forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
+
+		System.out.println("\n=== 파일 내용 ===");
+
+		// NIO2
+		Path fp = Paths.get("./src/work/com/workshop12/employee_salary.txt");
+
+		// 쓰기
+		try (BufferedWriter bw = Files.newBufferedWriter(fp)) {
+			for (Map.Entry<String, Integer> e : dataMap.entrySet()) {
+				bw.write(e.getKey() + ": " + e.getValue());
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// 읽기 및 정렬 후 출력
+		try (BufferedReader br = Files.newBufferedReader(fp)) {
+			List<String> lines = br.lines().collect(Collectors.toList());
+			lines.stream().sorted().forEach(System.out::println);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+package work.com.workshop12.date;
+
+import java.util.Date;
+
+public class ConvertDate {
+	public String convert(Date date, int type) {
+		return " ";
+	}
+}

@@ -1,0 +1,33 @@
+package work.com.workshop13.test08;
+
+public class Rectangle extends Shape implements Movable {
+	private int width;
+	
+	public Rectangle() {
+		
+	}
+	
+	public Rectangle(int width, int x, int y) {
+		this.width = width;
+		this.point.setX(x);
+		this.point.setY(y);
+	}
+
+	@Override
+	public void move(int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getCircumference() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

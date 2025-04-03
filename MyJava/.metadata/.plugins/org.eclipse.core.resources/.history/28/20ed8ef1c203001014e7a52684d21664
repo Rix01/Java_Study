@@ -1,0 +1,11 @@
+package com.sec13.myNio;
+import java.nio.file.*;
+
+public class a_NIO2 {
+
+	public static void main(String[] args) throws Exception{
+		
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package work.com.workshop01;
+
+class Test05 {
+	public static void main(String[] args) {
+		int fahrenheit = 100;
+		float celcius = 4.5f;
+	}
+}

@@ -1,0 +1,14 @@
+package work.com.workshop12.string;
+
+import java.util.List;
+
+public class StringTest01 {
+	public static void main(String[] args) {
+		String str = "I am second to none";
+		
+		str.chars().mapToObj(c -> (char) c)
+					.forEach(c -> System.out.print(c+" "));
+		
+		
+	}
+}

@@ -1,0 +1,29 @@
+package work.com.workshop13.test07;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class MapTest {
+	public static void main(String[] args) {
+		Map<String, Mobile> map = new HashMap<String, Mobile>();
+		double sum = 0.0;
+		// 4개의 Mobile 객체 생성
+		// map에 4개의 객체를 code를 키 값으로 넣는다.
+		map.put("LU6800", new Mobile("LU6800","Optimus 2X", 800000));
+		map.put("SU6600", new Mobile("LU6800","Optimus Black", 900000));
+		map.put("KU5700", new Mobile("LU6800","Optimus Big", 700000));
+		map.put("SU7600", new Mobile("LU6800","Optimus Mach", 950000));
+		
+		// 해시는 for문 사용 불가능이므로 key 중심으로 따로 인스턴스 생성
+		Set<String> keys = map.keySet();
+		// Mobile 정보를 출력 하고 합계를 계산
+		for(String s:keys) {
+			System.out.println(map.get(s).printInfo());
+		}
+		
+		// Mobile 객체의 가격 정보를 10% 증가 시킨다.
+
+		// 변경된 정보를 출력 하고 합계를 계산
+	}
+}

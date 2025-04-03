@@ -1,0 +1,32 @@
+package work.com.workshop13.test08;
+
+public abstract class Shape {
+	protected Point point;
+	
+	public Shape() {
+		
+	}
+
+	public Shape(Point point) {
+		super();
+		this.point = point;
+	}
+	
+	public double getArea() {
+		return 0;
+	}
+	
+	public double getCircumference() {
+		return 0;
+	}
+
+	public Point getPoint() {
+		return point;
+	}
+
+	public void setPoint(Point point) {
+		this.point = point;
+	}
+	
+	
+}

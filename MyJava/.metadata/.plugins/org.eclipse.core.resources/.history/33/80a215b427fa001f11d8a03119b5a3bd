@@ -1,0 +1,28 @@
+package com.sec02;
+	public class BitOperator {
+		
+		public static void prn() {
+			int a=51;
+			int b=240;
+			
+			 System.out.println("AND ="+( a&b));
+			 System.out.println("OR=" +(a|b));
+			 System.out.println("XOR="+(a^b));
+		}
+		
+		public static void main(String[] args) {
+			// 정수를 2진 문자열로 변경해보자.
+			int a = 51;
+			int b = 240;
+			
+			System.out.println("a의 51을 2진 문자열로 = " + Integer.toBinaryString(a));
+			System.out.println("b의 240을 2진 문자열로 = " + Integer.toBinaryString(b));
+			
+		}
+	}
+
+
+
+
+	
+	

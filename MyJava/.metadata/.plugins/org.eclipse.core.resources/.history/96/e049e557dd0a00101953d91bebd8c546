@@ -1,0 +1,24 @@
+package work.com.workshop12.date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class ConvertDate {
+	public String convert(Date date, int type) {
+		SimpleDateFormat format1, format2, format3;
+		
+		if(type==1) {
+			format1 = new SimpleDateFormat("yyyy-MM-dd");
+			return format1.format(date);
+		}
+		else if(type == 2) {
+			format2 = new SimpleDateFormat("yy년 M월 dd일 E요일", Locale.KOREAN);
+			return format2.format(date);
+		}
+		else if(type == 3) {
+			format3 = new SimpleDateFormat("yy년 MM월 dd일 E요일", Locale.KOREAN);
+			return format3.format(date);
+		}
+	}
+}

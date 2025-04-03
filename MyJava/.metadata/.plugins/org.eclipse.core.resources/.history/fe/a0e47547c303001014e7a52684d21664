@@ -1,0 +1,12 @@
+package com.sec13.myNio;
+import java.nio.file.*;
+
+public class a_NIO2 {
+
+	public static void main(String[] args) throws Exception{
+		// Q1. D: Test 폴더 생성하자.
+		Path test = Paths.get("");
+		Files.createDirectories(test);
+	}
+
+}

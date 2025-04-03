@@ -1,0 +1,10 @@
+package work.com.workshop12.string2;
+
+public class StringTest02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

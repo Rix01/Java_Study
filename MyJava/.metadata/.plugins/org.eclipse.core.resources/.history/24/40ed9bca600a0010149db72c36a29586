@@ -1,0 +1,12 @@
+package work.com.workshop12.string;
+
+import java.util.List;
+
+public class StringTest01 {
+	public static void main(String[] args) {
+		String str = "I am second to none";
+		List<String> strStream = List.of(str);
+		
+		strStream.stream().filter(c -> c.chars()).forEach(s -> System.out.println(s));
+	}
+}

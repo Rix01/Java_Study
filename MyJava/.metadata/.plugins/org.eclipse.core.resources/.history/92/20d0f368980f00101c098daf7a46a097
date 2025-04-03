@@ -1,0 +1,38 @@
+package work.com.workshop13.test08;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShapeTest {
+	public static void main(String[] args) {
+		// ArrayList를 만들어 [1.사용데이터]의 객체의 순서대로 Circle 객체와
+		// Rectangle 객체를 생성하여 넣는다 
+		List<Shape> shapeList = new ArrayList<>();
+		shapeList.add(new Rectangle(4, 7, 5));
+		shapeList.add(new Rectangle(5, 4, 6));
+		shapeList.add(new Circle(6, 6, 7));
+		shapeList.add(new Circle(7, 8, 3));
+		
+		// 모든 객체의 넓이 정보와 둘레 정보를 화면에 출력 한다. – for 문 이용
+		System.out.printf("%-10s %-5s %-5s %-5s %-8s %-8s\n",
+						   "구분", "길이", "X좌표", "Y좌표", "Area", "Circumference");
+		for(Shape s:shapeList) {
+			// 저 길이가 아마 width, radius 각각 표현한 것 같은데 그러면 if문이 있어야 함.
+			if(s instanceof Rectangle) {
+				Rectangle r = (Rectangle) s;
+				System.out.printf("%-10s %-5d %-5d %-5d %-8f %-8f\n",
+						   r.getClass().getSimpleName(), r.getWidth(),r.point.getX(), r.point.getY(), r.getArea(), r.getCircumference() );
+			}
+			
+			else if(s instanceof Circle) {
+				Circle c = (Circle) s;
+				System.out.printf("%-10s %-5d %-5d %-5d %-8f %-8f\n",
+						   c.getClass().getSimpleName(), c.getRadius(),c.point.getX(), c.point.getY(), c.getArea(), c.getCircumference() );
+			}
+			
+		}
+		
+		// 모든 객체들에 move()함수를 이용하여 x가 10증가, y가 10증가
+		// 되도록 변경 한 후 객체 정보를 화면에 출력 한다. – for 문 이용
+	}
+}
