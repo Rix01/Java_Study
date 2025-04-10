@@ -1,4 +1,4 @@
-package work.com.workshop07;
+package work.com.workshop07.test01;
 
 public class ArrayTest {
 	public static void main(String[] args) {

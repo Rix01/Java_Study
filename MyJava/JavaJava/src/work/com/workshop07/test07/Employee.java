@@ -1,4 +1,4 @@
-package work.com.workshop07;
+package work.com.workshop07.test07;
 
 public abstract class Employee {
 	private String name;

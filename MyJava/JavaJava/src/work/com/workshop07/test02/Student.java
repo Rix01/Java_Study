@@ -1,4 +1,4 @@
-package work.com.workshop07;
+package work.com.workshop07.test02;
 
 public class Student extends Human{
 	private String number;

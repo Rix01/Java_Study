@@ -1,4 +1,4 @@
-package work.com.workshop07;
+package work.com.workshop07.test06;
 
 public abstract class Plane {
 	private String planeName;

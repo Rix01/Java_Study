@@ -1,13 +1,14 @@
-package work.com.workshop07;
+package work.com.workshop07.test06;
 
-public class Cargoplane extends Plane{
+public class Airplane extends Plane {
+
 	
-	public Cargoplane() {
+	public Airplane() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cargoplane(String planeName, int fuelSize) {
+	public Airplane(String planeName, int fuelSize) {
 		super(planeName, fuelSize);
 		// TODO Auto-generated constructor stub
 	}
@@ -15,11 +16,11 @@ public class Cargoplane extends Plane{
 	@Override
 	public void flight(int distance) {
 		int perTen = distance / 10;
-		// 10 주행마다 50 감소
+		// 10 주행마다 30 감소
 		for(int i =0 ; i<perTen; i++) {
-			this.setFuelSize(this.getFuelSize()-50);
+			this.setFuelSize(this.getFuelSize()-30);
 		}
 		
 	}
-
+	
 }

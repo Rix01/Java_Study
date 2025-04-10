@@ -1,4 +1,4 @@
-package work.com.workshop09;
+package work.com.workshop09.test01;
 
 import java.util.Scanner;
 
